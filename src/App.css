@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
 .App {
-  text-align: center;
+  background: rgba(0, 0 , 0, .65) url("crikvenica-background.png");
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
 }
 
 .App-logo {
@@ -7,16 +13,70 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  color: #fff;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+}
+
+.App-h1 {
+  text-align: right;
+  position: absolute;
+  top: 10%;
+  left: 65%;
+  font-size: 45px;
+  font-family: 'Montserrat', sans-serif;
+  transition: 2s;
+}
+
+.App-h1:hover {
+    transform: scale(1.08);
+}
+
+button {
+  position: absolute;
+  top: 85%;
+  left: 85%;
+  height: 50px;
+  width: 125px;
+  border-radius: 7px;
+  background: transparent;
+  color: #fff;
+  transition: 1.2s;
+}
+
+button:hover {
+   background: #b6995a;
+   color: #000;
+   border: none;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+.first-img {
+  position: absolute;
+  left: 42%;
+}
+
+.second-img {
+  position: absolute;
+  left: 62%;
+}
+
+.third-img {
+  position: absolute;
+  left: 22%;
+}
+
+.h1-second {
+  text-align: center;
+}
+
+.main-content {
+   text-align: right;
+   margin-right: 115px;
+   font-size: 15px;
 }
