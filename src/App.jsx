@@ -1,21 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Container, Navbar, Button } from 'react-bootstrap';
+import { Container, Table, Navbar, Dropdown } from 'react-bootstrap';
 import image1 from './apartmani-one.png'
 import image2 from './apartmani-two.png'
 import image3 from './apartmani-three.png'
 
-
 export const App = () => {
   return <>
     <Container className="mainContainer">
-      <Navbar className="bg-dark justify-content-between" variant="dark" sticky="top" fixed="top">
-          <Container>
-              <Navbar.Brand href="#" size="sm" variant="light" sticky="top" fixed="top">Test1</Navbar.Brand>
-              <Button href="#" size="sm" variant="light" sticky="top" fixed="top">Test2</Button>
-          </Container>
-      </Navbar>
+         <Navbar className="bg-dark justify-content-between" variant="dark" sticky="top" fixed="top" align="left">
+            <Container>
+                <Navbar.Brand href="#" >Pocetna</Navbar.Brand>
+                <Navbar.Brand href="https://en.wikipedia.org/wiki/Crikvenica" >O Crikvenici</Navbar.Brand>
+                <Dropdown>
+                  <Dropdown.Toggle variant="warning" id="dropdown-basic">
+                    Meni
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="https://duckduckgo.com/?q=apartmani+crikvenica&iax=images&ia=images">Galerija</Dropdown.Item>
+                    <Dropdown.Item href="https://temp-mail.org/">Kontakt</Dropdown.Item>
+                    <Dropdown.Item href="https://www.njuskalo.hr/iznajmljivanje-kuca/crikvenica">Ponuda</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+            </Container>
+        </Navbar>
         <Container className="App">
           <header className="App-header">
 
@@ -33,15 +43,6 @@ export const App = () => {
               <p>i imamo izbor za sve ukuse, od obiteljskih apartmana u uskom centru grada</p>
               <p>pa do apartmana najviše klase van buke centra.</p>
             </div>
-            <button type="button">Saznajte više</button>
-            <a
-              className="App-link"
-              href="https://en.wikipedia.org/wiki/Crikvenica"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h3>Discover Crikvenica</h3>
-            </a>
           </header>
         </Container>
         <Container className="App-two">
@@ -58,8 +59,38 @@ export const App = () => {
               </div>
           </header>
         </Container>
+        <Container className="App-three">
+          <Table striped bordered hover dark>
+            <body>
+              <tr>
+                <td>Crikvenica</td>
+                <td>2</td>
+                <td>50€</td>
+              </tr>
+              <tr>
+                <td>Crikvenica</td>
+                <td>2</td>
+                <td>40€</td>
+              </tr>
+              <tr>
+                <td>Crikvenica</td>
+                <td>3</td>
+                  <td>100€</td>
+              </tr>
+              <tr>
+                <td>Bakar</td>
+                <td>2</td>
+                <td>40€</td>
+              </tr>
+              <tr>
+                <td>Rijeka</td>
+                <td>2</td>
+                <td>50€</td>
+              </tr>
+            </body>
+          </Table>
+        </Container>
     </Container>
-
     </>
 }
 
